@@ -4,11 +4,11 @@
     {{ partial "post-share-left.html" . }}
   {{ end }}
 
-  {{ $shares := slice "x" "facebook" "whatsapp" }}
+  {{ $shares := slice "mastodon" "facebook" "linkedin" }}
   {{ $shareTitles := dict
-    "x" "X"
+    "mastodon" "Mastodon"
     "facebook" "Facebook"
-    "whatsapp" "WhatsApp"
+    "linkedin" "LinkedIn"
   }}
   {{ $shareLinks := dict
     "mastodon" (print "https://tootpick.org/#text=Read " .Title " by Pepsi from COMP6441 @ UNSW\n" .Permalink)
