@@ -11,9 +11,9 @@
     "whatsapp" "WhatsApp"
   }}
   {{ $shareLinks := dict
-    "x" (print "https://x.com/intent/post?text=" .Title "&url=" .Permalink)
+    "mastodon" (print "https://tootpick.org/#text=Read " .Title " by Pepsi from COMP6441 @ UNSW\n" .Permalink)
     "facebook" (print "https://facebook.com/sharer/sharer.php?u=" .Permalink)
-    "whatsapp" (print "https://wa.me/?text=" .Title " " .Permalink)
+    "linkedin" (print "https://www.linkedin.com/shareArticle?mini=true&url=" .Permalink)
   }}
   {{ if site.Params.reorderShares }}
     {{ $shares = site.Params.reorderShares }}
